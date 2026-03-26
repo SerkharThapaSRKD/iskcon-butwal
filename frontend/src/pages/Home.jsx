@@ -28,7 +28,7 @@ const Home = () => {
           initial={{ scale: 1.05 }} 
           animate={{ scale: 1 }} 
           transition={{ duration: 2, ease: "easeOut" }}
-          className="absolute inset-0 opacity-100 bg-[url('/radha_madhav_hero.png')] bg-cover bg-center"
+          className="absolute inset-0 opacity-100 bg-[url('/src/assets/hero.jpeg')] bg-cover bg-center"
         ></motion.div>
         
         <div className="relative z-20 max-w-7xl mx-auto text-center mt-12">
