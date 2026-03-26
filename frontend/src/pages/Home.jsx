@@ -20,15 +20,14 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-iskcon-dark text-white py-32 md:py-48 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* ✅ Overlay made lighter */}
-        <div className="absolute inset-0 bg-gradient-to-t from-iskcon-dark via-iskcon-dark/40 to-transparent z-10"></div>
+      <section className="relative bg-iskcon-dark text-white min-h-[90vh] py-32 md:py-48 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-end">
+        {/* Overlay removed for full image visibility */}
         {/* ✅ Image made clearer */}
         <motion.div 
           initial={{ scale: 1.05 }} 
           animate={{ scale: 1 }} 
           transition={{ duration: 2, ease: "easeOut" }}
-          className="absolute inset-0 opacity-100 bg-[url('/src/assets/altar.jpeg')] bg-cover bg-center"
+          className="fixed top-0 left-0 w-screen h-screen opacity-100 bg-[url('/src/assets/altar.jpeg')] bg-no-repeat bg-bottom bg-contain z-0"
         ></motion.div>
         
         <div className="relative z-20 max-w-7xl mx-auto text-center mt-12">
