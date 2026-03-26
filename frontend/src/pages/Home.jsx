@@ -21,39 +21,62 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative bg-iskcon-dark text-white py-32 md:py-48 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-iskcon-dark via-iskcon-dark/60 to-transparent z-10"></div>
+        
+        {/* ✅ Overlay made lighter */}
+        <div className="absolute inset-0 bg-gradient-to-t from-iskcon-dark via-iskcon-dark/40 to-transparent z-10"></div>
+
+        {/* ✅ Image made clearer */}
         <motion.div 
-          initial={{ scale: 1.05 }} animate={{ scale: 1 }} transition={{ duration: 2, ease: "easeOut" }}
-          className="absolute inset-0 opacity-80 bg-[url('/radha_madhav_hero.png')] bg-cover bg-center"
+          initial={{ scale: 1.05 }} 
+          animate={{ scale: 1 }} 
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="absolute inset-0 opacity-100 bg-[url('./src/assets/hero.jpeg')] bg-cover bg-center"
         ></motion.div>
         
         <div className="relative z-20 max-w-7xl mx-auto text-center mt-12">
+          
           <motion.div 
-            initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: -20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full border border-iskcon-gold/50 bg-iskcon-dark/40 backdrop-blur-sm text-iskcon-gold text-sm font-bold uppercase tracking-widest mb-6 shadow-xl"
           >
             <Sparkles className="h-4 w-4 mr-2 animate-pulse" />
             Spiritual Capital of Lumbini
           </motion.div>
+
+          {/* ✅ TEXT FIXED TO WHITE */}
           <motion.h1 
-            initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl sm:text-6xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 drop-shadow-2xl"
+            initial="hidden" 
+            animate="visible" 
+            variants={fadeUp} 
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-4xl sm:text-6xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
           >
-            Experience <span className="text-iskcon-yellow">Devotion</span> &<br className="hidden md:block"/> Spiritual Bliss
+            Experience <span className="text-white">Devotion</span> &<br className="hidden md:block"/> Spiritual Bliss
           </motion.h1>
+
           <motion.p 
-            initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.8, delay: 0.6 }}
+            initial="hidden" 
+            animate="visible" 
+            variants={fadeUp} 
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-6 text-lg sm:text-2xl text-iskcon-cream max-w-3xl mx-auto mb-12 drop-shadow-md font-medium"
           >
             Immerse yourself in ecstatic kirtan, ancient Vedic wisdom, and selfless service at ISKCON Butwal.
           </motion.p>
+
           <motion.div 
-            initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.8, delay: 0.8 }}
+            initial="hidden" 
+            animate="visible" 
+            variants={fadeUp} 
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6"
           >
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-iskcon-dark bg-gradient-to-r from-iskcon-yellow to-iskcon-gold hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 shadow-[0_0_20px_rgba(253,184,19,0.4)] transform hover:-translate-y-1 uppercase tracking-wider">
               Visit Temple
             </Link>
+
             <Link to="/donate" className="inline-flex items-center justify-center px-8 py-4 border-2 border-iskcon-yellow text-base font-bold rounded-full text-iskcon-yellow hover:bg-iskcon-yellow hover:text-iskcon-dark transition-all duration-300 shadow-lg transform hover:-translate-y-1 uppercase tracking-wider bg-iskcon-dark/30 backdrop-blur-sm">
               Donate <Heart className="ml-2 h-5 w-5 group-hover:text-iskcon-red transition-colors" />
             </Link>
@@ -91,7 +114,7 @@ const Home = () => {
                 View Schedule <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
               </Link>
             </motion.div>
-            
+
             {/* Card 2 */}
             <motion.div variants={fadeUp} className="bg-white rounded-[2rem] p-10 shadow-lg border border-iskcon-gold/20 hover:shadow-2xl hover:border-iskcon-orange/50 transition-all duration-500 transform hover:-translate-y-2 group relative overflow-hidden">
                <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-50 rounded-bl-full -z-10 transition-transform duration-700 group-hover:scale-125"></div>
@@ -104,7 +127,7 @@ const Home = () => {
                 View Calendar <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
               </Link>
             </motion.div>
-            
+
             {/* Card 3 */}
             <motion.div variants={fadeUp} className="bg-white rounded-[2rem] p-10 shadow-lg border border-iskcon-gold/20 hover:shadow-2xl hover:border-iskcon-orange/50 transition-all duration-500 transform hover:-translate-y-2 group relative overflow-hidden">
                <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-10 transition-transform duration-700 group-hover:scale-125"></div>
@@ -117,6 +140,7 @@ const Home = () => {
                 Support Now <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
               </Link>
             </motion.div>
+
           </motion.div>
         </div>
       </section>
