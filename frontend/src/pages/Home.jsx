@@ -21,16 +21,14 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative bg-iskcon-dark text-white py-32 md:py-48 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        
         {/* ✅ Overlay made lighter */}
         <div className="absolute inset-0 bg-gradient-to-t from-iskcon-dark via-iskcon-dark/40 to-transparent z-10"></div>
-
         {/* ✅ Image made clearer */}
         <motion.div 
           initial={{ scale: 1.05 }} 
           animate={{ scale: 1 }} 
           transition={{ duration: 2, ease: "easeOut" }}
-          className="absolute inset-0 opacity-100 bg-[url('./src/assets/hero.jpeg')] bg-cover bg-center"
+          className="absolute inset-0 opacity-100 bg-[url('/radha_madhav_hero.png')] bg-cover bg-center"
         ></motion.div>
         
         <div className="relative z-20 max-w-7xl mx-auto text-center mt-12">
