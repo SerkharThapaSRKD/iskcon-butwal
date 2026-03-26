@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFFDF7; /* iskcon-cream */
+    background-image: url('https://www.transparenttextures.com/patterns/floral-deco.png');
+    @apply font-sans tracking-wide text-gray-800;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-iskcon-dark;
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #F05A28, #FDB813);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
